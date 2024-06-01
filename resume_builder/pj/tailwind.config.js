@@ -14,6 +14,17 @@ export default {
       green_1: '#217d47',
       blue_1: '#1a91f0',
       green_2: '#e7f4ed',
+      text_1:'#1e2532',
+      bg_1: '#eff2f9',
+      bg_2:'#e7e9f9',
+      purple: '#343ecc',
+      purple2:'#7a82f5',
+      gray_text: '#828ba2'
+    },
+    extend: {
+      transitionProperty:{
+        border_width: 'border-width',
+      }
     }
   },
   plugins: [],

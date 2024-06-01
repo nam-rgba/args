@@ -22,8 +22,8 @@ export type CVStore = {
 }
 
 const initialState: CVStore = {
-     namecv: '',
-        jobTitle: '',
+     namecv: 'untitled',
+        jobTitle: 'a',
         fname: '',
         lname: '',
         email:'',
@@ -32,39 +32,20 @@ const initialState: CVStore = {
         dob: '',
         profileSummary: '',
         employmentHistory: [
-            {
-                jobTitle: '',
-                company: '',
-                startDate: '',
-                endDate: '',
-                description: '',
-            }
+
         ],
         education: [
-            {
-                degree: '',
-                school: '',
-                startDate: '',
-                endDate: '',
-                description: '',
-            }
+
         ],
         activities: [
-            {
-                title: '',
-                description: '',
-            }
+
         ],
         projects: [
-            {
-                name: '',
-                description: '',
-            }
+ 
         ],
         link:[''],
         skill:[''],
         language:[
-            {language: '', level: '',}
         ]
 }
 
