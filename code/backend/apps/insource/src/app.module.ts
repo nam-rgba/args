@@ -7,10 +7,13 @@ import { ConfigModule } from '@nestjs/config'
 import { TypeOrmModule } from '@nestjs/typeorm'
 import { User } from './user/schema/user.entity'
 import { ReviewsModule } from './reviews/reviews.module'
+import { GraphqlModule } from './graphql.module'
+import { CompanyModule } from './company/company.module'
 
 @Module({
   imports: [
     AuthModule,
+    GraphqlModule,
     ConfigModule.forRoot({
       isGlobal: true,
       envFilePath: '.env'
@@ -25,7 +28,8 @@ import { ReviewsModule } from './reviews/reviews.module'
       entities: [User],
       synchronize: true
     }),
-    ReviewsModule
+    ReviewsModule,
+    CompanyModule
   ],
   controllers: [AppController],
   providers: [AppService]

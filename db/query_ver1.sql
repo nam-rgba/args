@@ -28,7 +28,7 @@ CREATE TABLE User (
 );
 ALTER TABLE user MODIFY user_id VARCHAR(36);
 
-drop table if exists user
+drop table if exists user;
 
 alter table user
 modify user_id varchar(100) not null;
