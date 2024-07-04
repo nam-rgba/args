@@ -1,5 +1,5 @@
 import { Field, ID, ObjectType } from '@nestjs/graphql'
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm'
+import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm'
 
 @ObjectType()
 @Entity()
@@ -29,20 +29,30 @@ export class Company {
   website: string
 
   @Field()
+  @Column({ type: 'text' })
   description: string
 
   @Field()
+  @Column()
   rating: number
 
   @Field()
-  image: string
+  @Column()
+  vote_quantity: number
 
   @Field()
+  @Column({ nullable: true })
+  image: [string]
+
+  @Field()
+  @Column({ nullable: false })
   avatar: string
 
   @Field()
+  @CreateDateColumn()
   createdAt: Date
 
   @Field()
+  @UpdateDateColumn()
   updatedAt: Date
 }

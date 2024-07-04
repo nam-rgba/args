@@ -18,7 +18,32 @@ export class CreateCompanyInput {
 
   @Field()
   @IsNotEmpty()
+  email: string
+
+  @Field()
+  @IsNotEmpty()
   description: string
 
+  @Field({ nullable: false })
+  avatar: string
+
+  @Field()
+  @IsNotEmpty()
+  rating: number
+
+  @Field({ nullable: false })
+  vote_quantity: number
+
+  @Field({ nullable: false })
+  createdAt: Date
+
   // Field not required, can update later
+  @Field({ nullable: true })
+  image: [string]
+
+  @Field({ nullable: true })
+  industry: string
+
+  @Field({ nullable: true })
+  updatedAt: Date
 }
