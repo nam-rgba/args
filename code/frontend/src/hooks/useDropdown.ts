@@ -1,29 +1,23 @@
 import { useRef, useEffect, useState, useCallback } from 'react';
 
-interface DropdownProps {
-  initialIsVisible?: boolean;
-}
+// interface DropdownProps {
+//   initialIsVisible?: boolean;
+// }
 
-interface DropdownResult {
+// export interface DropdownResult {
+//   isOpen: boolean;
+//   toggleDropdown: () => void;
+//   dropdownRef: React.RefObject<HTMLDivElement>;
+// }
+export type DropdownResult = {
   isOpen: boolean;
   toggleDropdown: () => void;
   dropdownRef: React.RefObject<HTMLDivElement>;
-}
+};
 
-export const useDropdown = ({
-  initialIsVisible = false,
-}: DropdownProps = {}): DropdownResult => {
-  /**
-   * Creates a dropdown hook with the initial visibility state and click outside
-   * functionality.
-   *
-   * @param {DropdownProps} initialIsVisible - the initial visibility state
-   * @return {DropdownResult} object containing the visibility state, toggle
-   * function, and dropdown reference
-   */
-
+export const useDropdown = () => {
   // State to store the visibility
-  const [isOpen, setIsVisible] = useState(initialIsVisible);
+  const [isOpen, setIsVisible] = useState(false);
   // Reference to the dropdown
   const dropdownRef = useRef<HTMLDivElement>(null);
 

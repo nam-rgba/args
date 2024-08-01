@@ -11,6 +11,11 @@ CREATE TABLE Company (
     vote_quantity INT,
     image TEXT,
     avatar VARCHAR(255),
+    industry varchar(50),
+    country varchar(50),
+    city varchar(50),
+    ot boolean,
+    techstack json,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
@@ -25,6 +30,18 @@ CREATE TABLE User (
     roletag varchar(100) default	'',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+CREATE TABLE Review (
+    review_id VARCHAR(36) PRIMARY KEY,
+    user_id VARCHAR(36) NOT NULL,
+    company_id VARCHAR(36) NOT NULL,
+    rating INT CHECK (rating >= 1 AND rating <= 5),
+    title VARCHAR(255),
+    content TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+select * from user;
+
 
 DROP TABLE IF EXISTS Review;
 DROP TABLE IF EXISTS Job;
