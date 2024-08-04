@@ -24,3 +24,19 @@ body {
 input {
   background-color: #ffffff;
 }
+
+.wrapper-class {
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+.editor-class {
+  background-color: rgb(254, 253, 253);
+  padding: 1rem;
+  border: 1px solid #ccc;
+  color: #1e2532;
+}
+
+.toolbar-class {
+  border: 1px solid #ccc;
+}

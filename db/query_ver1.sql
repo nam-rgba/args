@@ -9,12 +9,11 @@ CREATE TABLE Company (
     description TEXT,
     rating FLOAT,
     vote_quantity INT,
-    image TEXT,
     avatar VARCHAR(255),
     industry varchar(50),
     country varchar(50),
     city varchar(50),
-    ot boolean,
+    ot varchar(50),
     techstack json,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
@@ -41,6 +40,12 @@ CREATE TABLE Review (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 select * from user;
+
+CREATE TABLE Country (
+	country int primary key,
+    name varchar(36) not null
+);
+insert into Country values (6, 'Australia');
 
 
 DROP TABLE IF EXISTS Review;

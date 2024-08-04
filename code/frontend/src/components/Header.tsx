@@ -72,7 +72,7 @@ export const Header = () => {
   return (
     <div
       className="w-full h-[66px] flex flex-row items-center justify-between  pt-[3px] pb-[5px] px-[30px]
-      border-b border-b-bg_1 relative"
+      border-b border-b-bg_1 sticky top-0 z-10 bg-[#ffffff]"
     >
       {/* branch, logo */}
       <div className="w-[120px] h-full p-2 flex flex-row justify-between items-center">

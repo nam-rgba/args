@@ -36,8 +36,9 @@ export const useDropdown = () => {
 
   // Function to toggle the visibility
   const toggleDropdown = useCallback(() => {
+    console.log(isOpen);
     setIsVisible((prevVisible) => !prevVisible);
-  }, [setIsVisible]);
+  }, [setIsVisible, isOpen]);
 
   // Add event listener
   useEffect(() => {
