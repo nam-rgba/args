@@ -75,12 +75,14 @@ export const Header = () => {
       border-b border-b-bg_1 sticky top-0 z-10 bg-[#ffffff]"
     >
       {/* branch, logo */}
-      <div className="w-[120px] h-full p-2 flex flex-row justify-between items-center">
-        <img src={logo} alt="" className=" h-2/3 object-cover " />
-        <div className="text-[21px] font-semibold text-purple leading-6 ml-2">
-          InSource
+      <Link to={'/'} className="h-full">
+        <div className="w-[120px] h-full p-2 flex flex-row justify-between items-center">
+          <img src={logo} alt="" className=" h-[80%] object-cover " />
+          <div className="text-[23px] font-semibold text-text_1 font-roboto leading-6 ml-4">
+            InSource
+          </div>
         </div>
-      </div>
+      </Link>
       {/* Middle, links */}
       <div className="w-[24%] font-semibold h-full mt-2 flex flex-row items-center justify-between">
         <a className="hover:text-purple" href="">

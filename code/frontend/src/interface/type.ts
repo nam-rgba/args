@@ -42,3 +42,10 @@ export type SelectInputGroupT = {
   set: (value: string) => void;
   value: string;
 };
+
+export type SearchResult = {
+  name: string;
+  avatar: string;
+  rating: number;
+  vote_quantity: number;
+};

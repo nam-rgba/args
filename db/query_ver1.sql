@@ -39,7 +39,7 @@ CREATE TABLE Review (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
-select * from user;
+select * from company;
 
 CREATE TABLE Country (
 	country int primary key,

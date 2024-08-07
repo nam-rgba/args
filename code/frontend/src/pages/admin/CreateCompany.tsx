@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Header } from '../../components/Header';
 import ImageUpload from '../../components/Image';
 import {
@@ -16,6 +16,8 @@ import { useMutation, gql } from '@apollo/client';
 import { useDropdown } from '../../hooks/useDropdown';
 import { IoIosArrowRoundBack } from 'react-icons/io';
 import { FaStarOfLife } from 'react-icons/fa';
+import { RiShoppingBag3Fill } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
 
 // mutation
 const CREATE_COMPANY = gql`
@@ -142,10 +144,17 @@ const CreateCompany = () => {
     <React.Fragment>
       <Header></Header>
       <div className="w-full relative flex flex-row justify-end ">
-        <div className="h-full fixed top-[66px] left-[-2rem] w-[5rem] bg-[#1c1952] rounded-md"></div>
-        <div className="w-40 flex flex-row justify-start items-center h-8 pt-8">
+        <div className="h-full fixed top-[66px] left-[-2rem] w-[5rem] bg-purple rounded-md ">
+          <Link to="/createcompany">
+            <RiShoppingBag3Fill
+              size={20}
+              className=" text-white mt-8 ml-8 cursor-pointer w-12 h-10 py-[0.3rem] flex items-center justify-center hover:bg-purple2"
+            />
+          </Link>
+        </div>
+        <div className="w-40 flex flex-row justify-start items-center h-8 pt-8 pl-2">
           <IoIosArrowRoundBack size={20} className="cursor-pointer" />
-          <div className="ml-4 font-semibold text-base text-purple">
+          <div className="ml-2 font-semibold text-base text-purple">
             Create Company
           </div>
         </div>
@@ -178,7 +187,7 @@ const CreateCompany = () => {
               />
             </div>
             {/* Upload avatar */}
-            <div className="w-[80%] flex flex-col m-4 shadow-card p-4 ">
+            <div className="w-[80%] flex flex-col m-4 mt-40 shadow-card p-4 ">
               <label className="text-lg py-4 font-semibold">
                 Upload avatar
               </label>

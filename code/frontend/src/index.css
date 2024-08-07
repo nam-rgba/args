@@ -28,6 +28,7 @@ input {
 .wrapper-class {
   padding: 1rem;
   border: 1px solid #ccc;
+  height: 100%;
 }
 
 .editor-class {
@@ -35,6 +36,8 @@ input {
   padding: 1rem;
   border: 1px solid #ccc;
   color: #1e2532;
+  height: 80%;
+  overflow-y: scroll;
 }
 
 .toolbar-class {
