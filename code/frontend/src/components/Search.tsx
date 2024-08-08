@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { Search as SearchIcon } from 'lucide-react';
 import { useDropdown } from '../hooks/useDropdown';
 import SearchResult from './SearchResult';
+import Trend from '../components/Trend';
+
 const Search = ({
   text,
   delay,
@@ -14,22 +16,22 @@ const Search = ({
   const [currentText, setCurrentText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [inputText, setInputText] = useState('');
-  useEffect(() => {
-    let timeout: NodeJS.Timeout | undefined;
+  // useEffect(() => {
+  //   let timeout: NodeJS.Timeout | undefined;
 
-    if (currentIndex <= text.length) {
-      timeout = setTimeout(() => {
-        setCurrentText((prevText) => prevText + text[currentIndex]);
-        setCurrentIndex((prevIndex) => prevIndex + 1);
-      }, delay);
-    } else if (infinite) {
-      // ADD THIS CHECK
-      setCurrentIndex(0);
-      setCurrentText('');
-    }
+  //   if (currentIndex <= text.length) {
+  //     timeout = setTimeout(() => {
+  //       setCurrentText((prevText) => prevText + text[currentIndex]);
+  //       setCurrentIndex((prevIndex) => prevIndex + 1);
+  //     }, delay);
+  //   } else if (infinite) {
+  //     // ADD THIS CHECK
+  //     setCurrentIndex(0);
+  //     setCurrentText('');
+  //   }
 
-    return () => clearTimeout(timeout);
-  }, [currentIndex, delay, infinite, text]);
+  //   return () => clearTimeout(timeout);
+  // }, [currentIndex, delay, infinite, text]);
 
   const { isOpen, toggleDropdown, dropdownRef } = useDropdown();
   return (
@@ -56,16 +58,22 @@ const Search = ({
             onChange={(e) => setInputText(e.target.value)}
           />
         </div>
+
         {isOpen && (
           <div
             ref={dropdownRef}
-            className="absolute z-10 right-0 top-16 text-purple2 p-2 w-full text-left rounded
-            shadow-card
+            className="absolute left-10 top-16 text-text_1 text-left rounded-md
+            shadow-card p-4 z-20
             "
           >
+            <p className="text-sm text-gray_text font-semibold">
+              Search Companies
+            </p>
+
             <SearchResult text={inputText} />
           </div>
         )}
+        <Trend></Trend>
       </div>
       {/* dropdown */}
     </div>

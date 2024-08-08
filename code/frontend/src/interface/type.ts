@@ -44,8 +44,14 @@ export type SelectInputGroupT = {
 };
 
 export type SearchResult = {
+  company_id: string;
   name: string;
   avatar: string;
   rating: number;
   vote_quantity: number;
+};
+
+export type Trending = {
+  company_id: string;
+  name: string;
 };
