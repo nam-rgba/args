@@ -42,6 +42,7 @@ const CreateCompany = () => {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
   // state for image
   const [image, setImage] = useState('');
+  const [banner, setBanner] = useState('');
   // state for company
   const [industry, setIndustry] = useState('');
   const [city, setCity] = useState('');
@@ -72,6 +73,7 @@ const CreateCompany = () => {
       city: city,
       country: country,
       ot: ot,
+      banner: banner,
     };
 
     createCompany({
@@ -192,6 +194,14 @@ const CreateCompany = () => {
                 Upload avatar
               </label>
               <ImageUpload onUpload={(url) => setImage(url)} />
+            </div>
+
+            {/* Upload avatar */}
+            <div className="w-[80%] flex flex-col m-4 mt-40 shadow-card p-4 ">
+              <label className="text-lg py-4 font-semibold">
+                Upload Banner
+              </label>
+              <ImageUpload onUpload={(url) => setBanner(url)} />
             </div>
 
             {/* Industry */}

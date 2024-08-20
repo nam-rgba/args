@@ -63,7 +63,7 @@ const Search = ({
           <div
             ref={dropdownRef}
             className="absolute left-10 top-16 text-text_1 text-left rounded-md
-            shadow-card p-4 z-20
+            shadow-card p-4 z-20 bg-white
             "
           >
             <p className="text-sm text-gray_text font-semibold">
