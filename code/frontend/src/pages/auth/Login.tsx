@@ -9,7 +9,7 @@ export const Login = () => {
   // Login function
   const navigate = useNavigate();
   const api = axios.create({
-    baseURL: 'http://localhost:3003',
+    baseURL: 'http://localhost:3030',
     withCredentials: true,
   });
   const login = async (e: FormEvent) => {

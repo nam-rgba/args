@@ -55,3 +55,9 @@ export type Trending = {
   company_id: string;
   name: string;
 };
+
+export type DropdownType = {
+  isOpen: boolean;
+  toggleDropdown: () => void;
+  dropdownRef: React.RefObject<HTMLDivElement>;
+};
