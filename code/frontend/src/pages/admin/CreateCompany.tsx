@@ -11,7 +11,7 @@ import { EditorState, convertToRaw } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import 'draft-js/dist/Draft.css';
-import { useForm, SubmitHandler, set } from 'react-hook-form';
+import { useForm, SubmitHandler } from 'react-hook-form';
 import { useMutation, gql } from '@apollo/client';
 import { useDropdown } from '../../hooks/useDropdown';
 import { IoIosArrowRoundBack } from 'react-icons/io';
@@ -89,7 +89,7 @@ const CreateCompany = () => {
         <label className="text-lg py-4 font-semibold">{label}</label>
         <input
           type={type}
-          className="w-full h-10   rounded-[4px] px-4 py-2 focus:outline-none 
+          className="w-full h-10 border border-gray-300  rounded-[4px] px-4 py-2 focus:outline-none 
               focus:ring-2 focus:ring-purple focus:border-transparent
               shadow-card"
           {...register(nregister)}
@@ -189,7 +189,7 @@ const CreateCompany = () => {
               />
             </div>
             {/* Upload avatar */}
-            <div className="w-[80%] flex flex-col m-4 mt-40 shadow-card p-4 ">
+            <div className="w-[80%] flex flex-col m-4 mt-40 shadow-card p-4 border  ">
               <label className="text-lg py-4 font-semibold">
                 Upload avatar
               </label>
@@ -197,7 +197,7 @@ const CreateCompany = () => {
             </div>
 
             {/* Upload avatar */}
-            <div className="w-[80%] flex flex-col m-4 mt-40 shadow-card p-4 ">
+            <div className="w-[80%] flex flex-col m-4 mt-40 shadow-card p-4 border">
               <label className="text-lg py-4 font-semibold">
                 Upload Banner
               </label>
